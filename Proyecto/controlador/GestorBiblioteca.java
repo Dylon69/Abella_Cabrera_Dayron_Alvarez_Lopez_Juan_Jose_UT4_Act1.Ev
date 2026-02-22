@@ -62,4 +62,14 @@ public class GestorBiblioteca {
             System.out.println("No se encontró el préstamo.");
         }
     }
+
+    public void reservarLibro(Libro libro, Usuario usuario) {
+        if (libro != null && usuario !=null) {
+            if (!libro.hayCopiasDisponibles()) {
+                System.out.println("Reserva confirmada: " + libro.getTitulo() + " para el usuario " + usuario.getNombre());
+            } else {
+                System.out.println("El  libro tiene copias disponibles, no es necesario reservar.");
+            }
+        }
+    }
 }
