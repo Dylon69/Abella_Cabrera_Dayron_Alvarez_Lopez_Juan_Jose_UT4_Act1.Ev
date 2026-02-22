@@ -1,7 +1,11 @@
-import modelo.*;
+package controlador;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import modelo.Genero;
+import modelo.Libro;
 
 public class GestorBiblioteca {
 

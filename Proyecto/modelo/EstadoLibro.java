@@ -1,4 +1,4 @@
-package Proyecto.modelo;
+package modelo;
 
 public enum EstadoLibro {
     DISPONIBLE,

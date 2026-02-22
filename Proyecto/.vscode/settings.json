@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "controlador",
+        "modelo",
+        "main",
+        "vista"
+    ],
+    "java.project.referencedLibraries": []
+}
