@@ -30,4 +30,18 @@ public class GestorBiblioteca {
         }
     }
 
+    public void prestarLibro(Libro libro, Usuario usuario) {
+        if (libro != null && usuario != null) {
+            if (libro.hayCopiasDisponibles() && usuario.puedePedirPrestamo()) {
+
+                Prestamo nuevoPrestamo = new Prestamo(libro, usuario);
+                prestamos.add(nuevoPrestamo);
+                libro.prestar();
+                usuario.agregarPrestamo(nuevoPrestamo);
+                System.out.println("Prestamo realizado:" + libro.getTitulo());
+            } else {
+                System.out.println("No se puede realizar el prestamo.");
+            }
+        }
+    }
 }
