@@ -44,4 +44,22 @@ public class GestorBiblioteca {
             }
         }
     }
+
+    public void devolverLibro(Libro libro, Usuario usuario) {
+        Prestamo prestamoEncontrado = null;
+        for (Prestamo p : prestamos) {
+            if (p.getLibro().equals(libro) && p.getUsuario().equals(usuario)) {
+                prestamoEncontrado = p;
+                break;
+            }
+        }
+        if (prestamoEncontrado != null) {
+            libro.devolver();
+            usuario.devolverPrestamo(prestamoEncontrado);
+            prestamos.remove(prestamoEncontrado);
+            System.out.println("Libro devuelto: " + libro.getTitulo());
+        } else {
+            System.out.println("No se encontró el préstamo.");
+        }
+    }
 }
