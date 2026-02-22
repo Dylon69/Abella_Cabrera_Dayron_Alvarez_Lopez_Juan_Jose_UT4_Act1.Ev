@@ -89,7 +89,7 @@ public class GestorBiblioteca {
             consola.mostrarMensaje("2. Devolver libro");
             consola.mostrarMensaje("3. Reservar libro");
             consola.mostrarMensaje("4. Ver estado sistema");
-            consola.mostrarMensaje("5. Salir");
+            consola.mostrarMensaje("0. Salir");
 
             opcion = consola.leerEntero("Selecciona una opcion");
 
