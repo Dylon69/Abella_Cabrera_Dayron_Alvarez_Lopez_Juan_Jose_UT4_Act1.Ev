@@ -80,5 +80,51 @@ public class GestorBiblioteca {
         System.out.println("Prestamos activos actualmente: " + prestamos.size());
         System.out.println("=============================================");
     }
+
+    public void iniciarMenu(Consola consola) {
+        int opcion;
+        do { 
+            consola.mostrarMensaje("\n---MENU BIBLIOTECA---");
+            consola.mostrarMensaje("1. Prestar libro");
+            consola.mostrarMensaje("2. Devolver libro");
+            consola.mostrarMensaje("3. Reservar libro");
+            consola.mostrarMensaje("4. Ver estado sistema");
+            consola.mostrarMensaje("5. Salir");
+
+            opcion = consola.leerEntero("Selecciona una opcion");
+
+            switch (opcion) {
+                case 1:
+                    consola.mostrarMensaje("Ejecutando logaica de prestamo...");
+                    break;
+                case 2:
+                    consola.mostrarMensaje("Ejecutando logica de devolucion...");
+                    break;
+                case 3:
+                    consola.mostrarMensaje("Ejecutando logica de reserva...");
+                    break;
+                case 4:
+                    mostrarResumenEstado();
+                    break;
+                case 0:
+                    consola.mostrarMensaje("Saliendo del sistema...");
+                    break;
+                default:
+                    consola.mostrarMensaje("Opcion no valida, intente de nuevo.");
+            }
+        } while (opcion != 0);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     
 }
