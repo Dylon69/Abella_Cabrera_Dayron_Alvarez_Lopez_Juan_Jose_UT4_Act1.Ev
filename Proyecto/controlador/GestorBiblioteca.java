@@ -17,4 +17,17 @@ public class GestorBiblioteca {
         this.usuarios = new ArrayList<>();
         this.prestamos = new ArrayList<>();
     }
+
+    public void agregarLibro(Libro libro) {
+        if (libro != null) {
+            libros.add(libro);
+        }
+    }
+
+    public void registrarUsuario(Usuario usuario) {
+        if (usuario != null) {
+            usuarios.add(usuario);
+        }
+    }
+
 }
