@@ -72,4 +72,13 @@ public class GestorBiblioteca {
             }
         }
     }
+
+    public void mostrarResumenEstado() {
+        System.out.println("\n========== ESTADO DE LA BIBLIOTECA ==========");
+        System.out.println("Total de libros registrados: " + libros.size());
+        System.out.println("Total de usuarios registrados: " + usuarios.size());
+        System.out.println("Prestamos activos actualmente: " + prestamos.size());
+        System.out.println("=============================================");
+    }
+    
 }
