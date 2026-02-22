@@ -2,39 +2,19 @@ package controlador;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import modelo.Genero;
 import modelo.Libro;
+import modelo.Prestamo;
+import modelo.Usuario;
 
 public class GestorBiblioteca {
 
     private List<Libro> libros;
+    private List<Usuario> usuarios;
+    private List<Prestamo> prestamos;
 
     public GestorBiblioteca() {
-        libros = new ArrayList<>();
-    }
-
-    public void agregarLibro(Libro libro) {
-        libros.add(libro);
-    }
-
-    public List<Libro> buscarPorTitulo(String titulo) {
-        return libros.stream()
-                .filter(l -> l.getTitulo().equalsIgnoreCase(titulo))
-                .collect(Collectors.toList());
-    }
-
-    public Libro buscarPorISBN(String isbn) {
-        return libros.stream()
-                .filter(l -> l.getIsbn().equalsIgnoreCase(isbn))
-                .findFirst()
-                .orElse(null);
-    }
-
-    public List<Libro> buscarPorGenero(Genero genero) {
-        return libros.stream()
-                .filter(l -> l.getGenero() == genero)
-                .collect(Collectors.toList());
+        this.libros = new ArrayList<>();
+        this.usuarios = new ArrayList<>();
+        this.prestamos = new ArrayList<>();
     }
 }
