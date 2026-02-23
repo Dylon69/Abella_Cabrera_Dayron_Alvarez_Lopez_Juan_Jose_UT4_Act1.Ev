@@ -7,9 +7,13 @@ Este proyecto consiste en el desarrollo de un Sistema de Gestión de Biblioteca 
 ### El sistema permite:
 
 Registrar libros y usuarios
+
 Gestionar préstamos y devoluciones
+
 Aplicar restricciones de préstamo
+
 Buscar libros por diferentes criterios
+
 Mostrar resúmenes del estado del sistema
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -24,16 +28,23 @@ Creación de estructura MVC
 Implementación de:
 
 Libro
+
 Usuario
+
 Prestamo
+
 Genero
+
 EstadoLibro
 
 Implementación de restricciones:
 
 Máximo 3 préstamos
+
 30 días de duración
+
 Bloqueo de 7 días
+
 Métodos de búsqueda en GestorBiblioteca
 
 ### Juajo – Controlador y Vista
@@ -43,11 +54,19 @@ Responsable de:
 Implementación completa de GestorBiblioteca
 
 Métodos:
+
 prestarLibro()
+
 devolverLibro()
+
 reservarLibro()
+
 Resúmenes del sistema
+
 Clase Consola
+
 Menú interactivo
+
 Clase Main
+
 Pruebas del sistema
